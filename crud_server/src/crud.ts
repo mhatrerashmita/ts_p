@@ -90,13 +90,13 @@ export const updateUser = async (req: Request, res: Response) => {
         if (updatedUser) {
             res.json(updatedUser);
         } else {
-            res.status(404).json({ error: 'User not found' });
+            res.status(404).json({ error: 'User not found!' });
         }
     } catch (error) {
         res.status(500).json({ error: 'Internal Server Error' });
     }
 };
-
+//code 
 export const deleteUser = async (req: Request, res: Response) => {
     const id = parseInt(req.params.id);
     try {
